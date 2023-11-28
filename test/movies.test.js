@@ -12,7 +12,7 @@ describe("GET /api/movies", () => {
 
 describe("GET /api/movies/:id", () => {
   it("cela doit retourner un film", async () => {
-    const response = await request(app).get("/api/movies/:id");
+    const response = await request(app).get("/api/movies/1");
 
     expect(response.headers["content-type"]).toMatch(/json/);
     expect(response.status).toEqual(200);
